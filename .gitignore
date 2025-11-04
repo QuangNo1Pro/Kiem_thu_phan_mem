@@ -1,0 +1,49 @@
+# Created by Studio
+.gradle/
+.idea/
+local.properties
+captures/
+
+# Build files
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+build/
+*/build/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google services
+google-services.json
+
+# Misc
+.DS_Store
+*.iml
+.cxx/
+*.hprof
+.externalNativeBuild
+.cxx
+*.ll
+*.db
+.cxx
+*.hprof
+*.db-shm
+*.db-wal
+hs_err_pid*
+replay_pid*
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+!/.idea/copyright/
+!/.idea/misc.xml
+!/.idea/gradle.xml
+!/.idea/vcs.xml
+!/.idea/compiler.xml
+!/.idea/jarRepositories.xml
