@@ -1,0 +1,10 @@
+appId: com.example.myapplication
+---
+- launchApp:
+    clearState: true
+
+# Step 1: Tap Login button without entering any credentials
+- tapOn: "Login"
+
+# Step 2: Assert that the error message is visible
+- assertVisible: "Vui lòng nhập email"

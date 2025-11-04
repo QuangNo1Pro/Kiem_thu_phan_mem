@@ -1,0 +1,32 @@
+appId: com.example.myapplication
+---
+- launchApp:
+    clearState: true
+
+# Step 1: Navigate to Register screen and create a new user
+- tapOn:
+    id: "buttonGoToRegister"
+- assertVisible: "Đăng ký"
+- tapOn:
+    id: "editTextEmail"
+- inputText: "user@test.com"
+- tapOn:
+    id: "editTextPassword"
+- inputText: "password123"
+- tapOn:
+    id: "editTextConfirmPassword"
+- inputText: "password123"
+- tapOn: "Đăng ký"
+- assertVisible: "Đăng nhập" # Verify we are back on the login screen
+
+# Step 2: Login with the newly created credentials
+- tapOn:
+    id: "editTextEmail"
+- inputText: "user@test.com"
+- tapOn:
+    id: "editTextPassword"
+- inputText: "password123"
+- tapOn: "Login"
+
+# Step 3: Wait for the Home screen to load by asserting the toolbar is visible, then check the title
+- assertVisible: "Trang chủ"

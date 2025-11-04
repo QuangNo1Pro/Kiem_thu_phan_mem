@@ -1,0 +1,39 @@
+appId: com.example.myapplication
+---
+- launchApp:
+    clearState: true
+
+# Step 1: Register a new user
+- tapOn:
+    id: "buttonGoToRegister" # FIXED: Using ID instead of text
+- assertVisible: "Đăng ký"
+- tapOn:
+    id: "editTextEmail"
+- inputText: "user@test.com"
+- tapOn:
+    id: "editTextPassword"
+- inputText: "password123"
+- tapOn:
+    id: "editTextConfirmPassword"
+- inputText: "password123"
+- tapOn: "Đăng ký"
+
+# Step 2: Login with the new user
+- assertVisible: "Đăng nhập"
+- tapOn:
+    id: "editTextEmail"
+- inputText: "user@test.com"
+- tapOn:
+    id: "editTextPassword"
+- inputText: "password123"
+- tapOn: "Login"
+
+# Step 3: Verify successful login and then logout from the home screen
+- assertVisible: "Trang chủ"
+- tapOn:
+    id: "action_logout"
+- assertVisible: "Bạn có chắc chắn muốn đăng xuất không?"
+- tapOn: "Đăng xuất"
+
+# Step 4: Assert that the app has returned to the Login screen
+- assertVisible: "Đăng nhập"
